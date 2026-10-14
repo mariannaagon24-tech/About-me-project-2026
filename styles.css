@@ -1,0 +1,39 @@
+
+.dancing-script {
+  font-family: "Dancing Script", cursive;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+ul {
+    background-color:  #006747;
+}
+body {
+  background-color: white;
+  font-family: Arial, sans-serif;
+  color: #123568;
+}
+
+h1, h2 {
+  color: #006747;
+}
+
+
+.profile-img {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  border: 5px solid #f6ce24;
+}
+
+main {
+  min-height: 75vh;
+}
+
+section {
+  margin-top: 25px;
+}
+
+footer {
+  margin-top: 30px;
+}
