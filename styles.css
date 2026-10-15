@@ -1,4 +1,3 @@
-
 .dancing-script {
   font-family: "Dancing Script", cursive;
   font-optical-sizing: auto;
@@ -6,25 +5,25 @@
   font-style: normal;
 }
 ul {
-    background-color:  #006747;
+  column-rule-color: #d2ddda;
 }
 body {
   background-color: white;
   font-family: Arial, sans-serif;
-  color: #123568;
+  color: #000101;
 }
 
-h1, h2 {
-  color: #006747;
+h1,h3 {
+  color: #0d855f;
 }
 
-
-.profile-img {
-  width: 220px;
-  height: 220px;
+.profile-photo {
+  width: 250px;
+  height: 250px;
   object-fit: cover;
   border: 5px solid #f6ce24;
 }
+
 
 main {
   min-height: 75vh;
@@ -32,8 +31,11 @@ main {
 
 section {
   margin-top: 25px;
+
 }
 
 footer {
   margin-top: 30px;
+  background-color: #006747;
+  color: aliceblue;
 }
