@@ -1,3 +1,4 @@
+
 .dancing-script {
   font-family: "Dancing Script", cursive;
   font-optical-sizing: auto;
@@ -5,25 +6,58 @@
   font-style: normal;
 }
 ul {
-  column-rule-color: #d2ddda;
+    background-color:  #006747;
 }
 body {
   background-color: white;
   font-family: Arial, sans-serif;
-  color: #000101;
+  color: #123568;
 }
 
-h1,h3 {
-  color: #0d855f;
+h1, h2 {
+  color: #006747;
 }
 
-.profile-photo {
-  width: 250px;
-  height: 250px;
+
+.profile-img {
+  width: 220px;
+  height: 220px;
   object-fit: cover;
-  border: 5px solid #f6ce24;
+  border-radius: 50%;
+}
+.photo-flag {
+  position: absolute;
+  left: 50%; bottom: -10px;
+  transform: translateX(-190px) rotate(-8deg);
+  filter: drop-shadow(0 3px 4px rgba(0,0,0,.25));
+}
+.hero-quote {
+  position: absolute;
+  right: 0; top: 50%;
+  transform: translateY(-40%) rotate(-8deg);
+  font-size: 1.5rem;
+  line-height: 1.25;
+  text-align: left;
+  color: var(--navy);
 }
 
+/* ===== SHARED SECTION TITLES ===== */
+.section-title { display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem; }
+.section-title i { font-size: 2.4rem; color: var(--green); }
+.section-title h2 { font-size: 2rem; margin: 0; }
+.section-title h3 { font-size: 1.4rem; margin: 0; }
+.section-title-sm i { font-size: 1.8rem; }
+.subtitle { margin: 0; font-weight: 600; }
+
+/* ===== ABOUT ===== */
+.section-about { padding: 3rem 0; }
+.info-card {
+  background: #f7fafd;
+  border: 1px solid #e3eaf3;
+  border-radius: 14px;
+  padding: .5rem 1.25rem;
+  box-shadow: 0 4px 14px rgba(10, 42, 107, .06);
+}
 
 main {
   min-height: 75vh;
@@ -31,11 +65,8 @@ main {
 
 section {
   margin-top: 25px;
-
 }
 
 footer {
   margin-top: 30px;
-  background-color: #006747;
-  color: aliceblue;
 }
