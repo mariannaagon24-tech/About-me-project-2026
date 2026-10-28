@@ -23,7 +23,7 @@ h1, h2, h3, h4 { font-weight: 700; color: var(--navy); }
 .script { font-family: 'Dancing Script', cursive; font-weight: 600; }
 .dot { color: var(--green); margin: 0 .25rem; }
 
-/* ===== NAV ===== */
+
 .site-nav { background: var(--green); padding: .6rem 0; }
 .brand-script {
   font-family: 'Dancing Script', cursive;
