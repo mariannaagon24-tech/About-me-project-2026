@@ -1,93 +1,237 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Me project</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-B/GM4XqrwHnWXNOWMbloTmrYXZg10cakYGmpfsR/bbzQ6JAJI4ihuyADKLnBgrCe" crossorigin="anonymous">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Me | Mariana</title>
+
+<!-- Bootstrap 5 (stable) + Bootstrap Icons -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+
+<!-- Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
- <ul class="nav justify-content-end">
-  <li class="nav-item">
-    <a class="nav-link active" aria-current="page" href="#">Home</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#">Skills</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#">Contact</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link disabled" aria-disabled="true">About Me</a>
-  </li>
-</ul>
-<main class="container my-5">
+
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="br-flag" viewBox="0 0 40 28">
+    <rect width="40" height="28" rx="3" fill="#009c3b"/>
+    <polygon points="20,3 37,14 20,25 3,14" fill="#ffdf00"/>
+    <circle cx="20" cy="14" r="6.5" fill="#002776"/>
+    <path d="M14 13 Q20 11 26 15" stroke="#fff" stroke-width="1.3" fill="none"/>
+  </symbol>
+</svg>
+
+
+<nav class="navbar navbar-expand-lg site-nav sticky-top">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center gap-2" href="#home">
+      <svg class="flag-sm" width="44" height="31"><use href="#br-flag"/></svg>
+      <span class="brand-script">About Me</span>
+    </a>
+    <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+      <i class="bi bi-list text-white fs-2"></i>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="mainNav">
+      <ul class="navbar-nav gap-lg-3">
+        <li class="nav-item"><a class="nav-link active" aria-current="page" href="#home">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+        <li class="nav-item"><a class="nav-link" href="#interests">Interests</a></li>
+        <li class="nav-item"><a class="nav-link" href="#journey">Journey</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<header id="home" class="hero">
+  <div class="container">
     <div class="row align-items-center">
-      <div class="col-md-4 text-center">
-        <img src="images/C35399E2-F22B-48F3-8A4F-2B043E0195C2_1_105_c.jpeg"
-             alt="Mariana's profile photo"
-             class="img-fluid rounded-circle profile-img">
+      <div class="col-lg-6 hero-text">
+        <span class="script hero-hello">Olá!</span>
+        <h1 class="hero-name">Mariana
+          <svg class="hero-flag" width="60" height="42"><use href="#br-flag"/></svg>
+        </h1>
+        <p class="hero-tagline">Brazilian <span class="dot">•</span> San Francisco <span class="dot">•</span> Future Cybersecurity Professional</p>
+        <div class="hero-rule"></div>
+        <p class="hero-intro">
+          I'm from Brazil and currently building my life and career in San Francisco.
+          I'm passionate about technology, cybersecurity, coffee, fitness, travel
+          and all the little things that make life meaningful.
+        </p>
+        <a href="#about" class="btn btn-pill btn-green">Learn More <i class="bi bi-arrow-right ms-2"></i></a>
       </div>
 
-      <div class="col-md-8">
-        <h1 class="dancing-script">Olá! I'm Mariana 🇧🇷</h1>
-        <p class="text-primary">Brazilian · San Francisco · Future Cybersecurity Professional</p>
-
-  <section id="about">
-          <h2>About Me</h2>
-          <p>
-            I'm from Brazil and currently building my life and career
-            in San Francisco. I'm passionate about technology,
-            cybersecurity, coffee, fitness, travel, and faith.
-          </p>
-          <p>
-            I'm learning web development and cybersecurity while
-            developing new skills and working toward my career goals.
-          </p>
-        </section>
-
-        <section id="skills">
-          <h2>My Skills</h2>
-          <ul class="list-group">
-            <li class="list-group-item">HTML and CSS</li>
-            <li class="list-group-item">Bootstrap and GitHub</li>
-            <li class="list-group-item">Communication and problem solving</li>
-          </ul>
-        </section>
- <div class="mt-3">
-          <a href="#" class="btn btn-success">Web App & IoT Project</a>
-          <a href="https://www.linkedin.com/"
-             target="_blank" rel="noopener noreferrer"
-             class="btn btn-primary">LinkedIn</a>
+      <div class="col-lg-6 hero-photo-wrap">
+        <div class="photo-ring">
+          <img src="images/C35399E2-F22B-48F3-8A4F-2B043E0195C2_1_105_c.jpeg" alt="Mariana's profile photo" class="profile-img">
         </div>
+        <svg class="photo-flag" width="110" height="70"><use href="#br-flag"/></svg>
+        <p class="script hero-quote d-none d-lg-block">
+          <i class="bi bi-heart"></i> —<br>Big dreams<br>from Brazil<br>to the Bay
+        </p>
       </div>
     </div>
-  </main>
+  </div>
+</header>
 
-  <footer id="contact" class="bg-success text-white text-center p-3">
-    About Me Project · by Mariana Santos
-  </footer>
-
+<main>
 
 
+<section id="about" class="section-about">
+  <div class="container">
+    <div class="row align-items-center g-4">
+      <div class="col-lg-5">
+        <div class="section-title">
+          <i class="bi bi-person-fill"></i>
+          <h2>About Me</h2>
+        </div>
+        <p>
+          I'm Mariana, a Brazilian born and raised in a country full of culture,
+          good food and amazing people. <strong>I moved to the U.S.</strong> to
+          experience new opportunities, grow professionally and create the life I want.
+        </p>
+        <p>
+          I'm currently focused on learning, building my skills in tech and
+          cybersecurity, and making a positive impact in everything I do.
+        </p>
+      </div>
+
+      <div class="col-lg-4">
+        <div class="info-card">
+          <div class="info-row"><i class="bi bi-geo-alt-fill"></i><div><small>From</small><strong>Brazil</strong></div></div>
+          <div class="info-row"><i class="bi bi-person-fill"></i><div><small>Currently in</small><strong>San Francisco, CA</strong></div></div>
+          <div class="info-row"><i class="bi bi-mortarboard-fill"></i><div><small>Career goal</small><strong>Cybersecurity</strong></div></div>
+          <div class="info-row"><i class="bi bi-heart-fill"></i><div><small>Languages</small><strong>Portuguese <span class="dot">•</span> English <span class="dot">•</span> Spanish</strong></div></div>
+        </div>
+      </div>
+
+      <div class="col-lg-3">
+        <div class="bridge-photo" role="img" aria-label="Golden Gate Bridge at sunset"></div>
+      </div>
+    </div>
+  </div>
+</section>
 
 
-    
+<section id="skills" class="section-skills">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-lg-6 skills-col">
+        <div class="section-title">
+          <i class="bi bi-gear-fill"></i>
+          <div>
+            <h2>Skills</h2>
+            <p class="subtitle">Tools &amp; Technologies</p>
+          </div>
+        </div>
+        <div class="pills">
+          <span class="pill pill-green">HTML</span>
+          <span class="pill pill-green">CSS</span>
+          <span class="pill pill-green">Bootstrap</span>
+          <span class="pill pill-green">Git &amp; GitHub</span>
+          <span class="pill pill-yellow">Cybersecurity</span>
+          <span class="pill pill-blue">Problem Solving</span>
+          <span class="pill pill-navy">Communication</span>
+        </div>
+      </div>
+
+      <div class="col-lg-6">
+        <div class="section-title section-title-sm">
+          <i class="bi bi-mortarboard-fill"></i>
+          <h3>Education &amp; Training</h3>
+        </div>
+        <ul class="edu-list">
+          <li>High School Diploma</li>
+          <li>Financial Management Certificate (Uninter)</li>
+          <li>Sales &amp; Customer Service Courses</li>
+          <li>Google Cybersecurity Course (in progress)</li>
+          <li>Dev/Mission Pre-Apprenticeship Program (Fall 2026)</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
 
 
+<section id="interests" class="section-interests">
+  <div class="container">
+    <div class="section-title">
+      <i class="bi bi-star-fill"></i>
+      <h2>My Interests</h2>
+    </div>
+    <div class="row interests-row text-center">
+      <div class="col-6 col-md-4 col-lg-2 interest"><i class="bi bi-cup-hot-fill"></i><h4>Coffee</h4><p>Good coffee,<br>better days</p></div>
+      <div class="col-6 col-md-4 col-lg-2 interest"><i class="bi bi-lightning-charge-fill"></i><h4>Fitness</h4><p>Stronger<br>than yesterday</p></div>
+      <div class="col-6 col-md-4 col-lg-2 interest"><i class="bi bi-balloon-heart-fill"></i><h4>Pets</h4><p>Dogs make life<br>better</p></div>
+      <div class="col-6 col-md-4 col-lg-2 interest"><i class="bi bi-laptop"></i><h4>Tech</h4><p>Always curious,<br>always learning</p></div>
+      <div class="col-6 col-md-4 col-lg-2 interest"><i class="bi bi-airplane-fill"></i><h4>Travel</h4><p>New places,<br>new stories</p></div>
+      <div class="col-6 col-md-4 col-lg-2 interest"><i class="bi bi-book-fill"></i><h4>Faith</h4><p>Guided by<br>God's plan</p></div>
+    </div>
+  </div>
+</section>
 
 
+<section id="journey" class="section-journey">
+  <div class="container">
+    <div class="row align-items-center g-4">
+      <div class="col-lg-3 journey-title">
+        <i class="bi bi-geo-alt-fill"></i>
+        <div>
+          <h2 class="script">My Journey</h2>
+          <p>From Brazil to the Bay</p>
+        </div>
+      </div>
+
+      <div class="col-lg-6">
+        <div class="route">
+          <div class="stop">
+            <span class="stop-badge"><svg width="34" height="24"><use href="#br-flag"/></svg></span>
+            <strong>Brazil</strong>
+            <small>My roots, my culture,<br>my strength</small>
+          </div>
+          <div class="route-line"><i class="bi bi-airplane-fill"></i></div>
+          <div class="stop">
+            <span class="stop-badge"><i class="bi bi-bridge"></i></span>
+            <strong>San Francisco</strong>
+            <small>New dreams,<br>same heart</small>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 text-lg-end">
+        <p class="script journey-quote">“The best is yet to come.” <i class="bi bi-heart"></i></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
 
 
+<footer id="contact" class="site-footer">
+  <div class="container d-flex flex-column flex-md-row align-items-center justify-content-between gap-3">
+    <div class="social">
+      <a href="//www.linkedin.com/in/mariana-santos-081767308" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+      <a href="#" aria-label="GitHub"><i class="bi bi-github"></i></a>
+      <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+    </div>
+    <p class="copyright mb-0">
+      © 2026 Mariana Gonçalves dos Santos <span class="dot">•</span>
+      Built with <i class="bi bi-heart-fill text-warning"></i> and <a href="https://getbootstrap.com/" target="_blank" rel="noopener noreferrer">Bootstrap</a>
+    </p>
+    <svg class="flag-sm" width="34" height="24"><use href="#br-flag"/></svg>
+  </div>
+</footer>
 
-
-
-
-    <script type="module" src="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-1a/pXj49ZQ1aHEmrJ+gMw1otqoVsYwlEnlD8mIfY2TV03r20Y0CN7uqx1tQogjPL" crossorigin="anonymous"></script>
-
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

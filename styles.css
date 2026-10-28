@@ -1,27 +1,98 @@
+/* ===== Mariana's About Me page ===== */
 
-.dancing-script {
-  font-family: "Dancing Script", cursive;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
+:root {
+  --green: #0a6b3a;
+  --green-dark: #07562e;
+  --yellow: #ffd21f;
+  --blue: #0b5ed7;
+  --navy: #0a2a6b;
+  --mint: #eef6f2;
+  --text: #0a2a6b;
 }
-ul {
-    background-color:  #006747;
-}
+
+html { scroll-behavior: smooth; }
+
 body {
-  background-color: white;
-  font-family: Arial, sans-serif;
-  color: #123568;
+  font-family: 'Poppins', system-ui, sans-serif;
+  color: var(--text);
+  background: #fff;
+  line-height: 1.6;
 }
 
-h1, h2 {
-  color: #006747;
+h1, h2, h3, h4 { font-weight: 700; color: var(--navy); }
+.script { font-family: 'Dancing Script', cursive; font-weight: 600; }
+.dot { color: var(--green); margin: 0 .25rem; }
+
+
+.site-nav { background: var(--green); padding: .6rem 0; }
+.brand-script {
+  font-family: 'Dancing Script', cursive;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #fff;
 }
+.site-nav .nav-link {
+  color: #fff;
+  font-weight: 500;
+  padding: .4rem .2rem;
+  border-bottom: 3px solid transparent;
+}
+.site-nav .nav-link:hover { border-bottom-color: rgba(255,255,255,.5); }
+.site-nav .nav-link.active { border-bottom-color: var(--yellow); font-weight: 600; }
 
+/* ===== HERO ===== */
+.hero {
+  position: relative;
+  overflow: hidden;
+  padding: 3.5rem 0 4rem;
+  /* Layers: white fade, bridge photo (optional), sunset fallback */
+  background:
+    linear-gradient(90deg, #fff 25%, rgba(255,255,255,0) 60%),
+    url('https://www.uncoversouthamerica.travel/site/assets/files/9479/brazil-holidays-rio-de-janeiro.1920x0.jpg') right center / cover no-repeat,
+    linear-gradient(100deg, #fff 0%, #fdeedd 40%, #f8c79f 68%, #86b3e0 100%);
+}
+.hero::after { /* green + yellow swoosh, bottom right */
+  content: '';
+  position: absolute;
+  right: 0; bottom: 0;
+  width: 280px; height: 90px;
+  background: var(--green);
+  border-top: 8px solid var(--yellow);
+  border-top-left-radius: 100% 100%;
+}
+.hero-hello { font-size: 3rem; color: var(--navy); line-height: 1; display: block; }
+.hero-name {
+  font-size: clamp(3rem, 8vw, 5.2rem);
+  font-weight: 800;
+  line-height: 1;
+  margin: 0 0 .75rem;
+  display: flex; align-items: center; gap: .75rem; flex-wrap: wrap;
+}
+.hero-flag { flex-shrink: 0; transform: rotate(-4deg); }
+.hero-tagline { font-weight: 600; margin-bottom: .5rem; }
+.hero-rule { width: 22px; height: 2px; background: var(--green); margin-bottom: 1rem; }
+.hero-intro { max-width: 30rem; }
 
+.btn-pill {
+  border-radius: 50px;
+  padding: .7rem 1.6rem;
+  font-weight: 600;
+}
+.btn-green { background: var(--green); color: #fff; border: 2px solid var(--green); }
+.btn-green:hover { background: var(--green-dark); border-color: var(--green-dark); color: #fff; }
+
+.hero-photo-wrap { position: relative; text-align: center; padding: 1rem 0; }
+.photo-ring {
+  width: 260px; height: 260px;
+  margin: 0 auto;
+  border-radius: 50%;
+  border: 5px solid var(--yellow);
+  padding: 5px;
+  background: #fff;
+  box-shadow: 0 8px 24px rgba(10, 42, 107, .2);
+}
 .profile-img {
-  width: 220px;
-  height: 220px;
+  width: 100%; height: 100%;
   object-fit: cover;
   border-radius: 50%;
 }
@@ -58,15 +129,114 @@ h1, h2 {
   padding: .5rem 1.25rem;
   box-shadow: 0 4px 14px rgba(10, 42, 107, .06);
 }
+.info-row {
+  display: flex; align-items: center; gap: 1rem;
+  padding: .7rem 0;
+  border-bottom: 1px solid #e3eaf3;
+}
+.info-row:last-child { border-bottom: 0; }
+.info-row > i { font-size: 1.5rem; color: var(--navy); width: 1.8rem; text-align: center; }
+.info-row small { display: block; font-size: .75rem; line-height: 1.1; }
+.info-row strong { display: block; }
 
-main {
-  min-height: 75vh;
+.bridge-photo {
+  height: 220px;
+  border-radius: 12px;
+  background:
+    url('https://www.sftravel.com/sites/default/files/styles/hero/public/2024-06/golden-gate-bridge-bay-sunset.jpg.webp?h=e4f440a4&itok=OwHxs5a1') center / cover no-repeat,
+    linear-gradient(180deg, #86b3e0 0%, #f8c79f 60%, #b5503a 100%);
+  box-shadow: 0 4px 14px rgba(10, 42, 107, .2);
 }
 
-section {
-  margin-top: 25px;
+/* ===== SKILLS ===== */
+.section-skills { background: var(--mint); padding: 2.5rem 0; }
+.skills-col { border-right: 1px solid #b9d3c6; }
+.pills { display: flex; flex-wrap: wrap; gap: .75rem; max-width: 30rem; }
+.pill {
+  padding: .45rem 1.3rem;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: .9rem;
+  color: #fff;
+}
+.pill-green  { background: var(--green); }
+.pill-yellow { background: var(--yellow); color: var(--navy); }
+.pill-blue   { background: var(--blue); }
+.pill-navy   { background: var(--navy); }
+
+.edu-list { list-style: none; padding: 0; margin: 0; }
+.edu-list li { position: relative; padding-left: 2.5rem; margin-bottom: .35rem; }
+.edu-list li::before {
+  content: '';
+  position: absolute; left: 1rem; top: .65rem;
+  width: 7px; height: 7px;
+  border-radius: 50%;
+  background: var(--green);
 }
 
-footer {
-  margin-top: 30px;
+/* ===== INTERESTS ===== */
+.section-interests { padding: 2.5rem 0 3rem; }
+.interest { padding: .5rem 1rem; border-right: 1px solid #d3deea; }
+.interest:last-child { border-right: 0; }
+.interest i { font-size: 2.2rem; color: var(--green); }
+.interest h4 { font-size: 1.05rem; margin: .4rem 0 .1rem; }
+.interest p { font-size: .82rem; margin: 0; line-height: 1.35; }
+
+/* ===== JOURNEY ===== */
+.section-journey {
+  background: var(--navy);
+  color: #fff;
+  padding: 2rem 0;
+}
+.journey-title { display: flex; align-items: center; gap: 1rem; }
+.journey-title > i { font-size: 2.4rem; color: var(--yellow); }
+.journey-title h2 { color: #fff; font-size: 2.2rem; margin: 0; }
+.journey-title p { margin: 0; font-weight: 600; }
+
+.route { display: flex; align-items: flex-start; justify-content: center; gap: 1rem; text-align: center; }
+.stop { display: flex; flex-direction: column; align-items: center; max-width: 9rem; }
+.stop-badge {
+  width: 46px; height: 46px;
+  border-radius: 50%;
+  background: #fff;
+  border: 3px solid var(--yellow);
+  display: flex; align-items: center; justify-content: center;
+  color: #c0392b; font-size: 1.4rem;
+  margin-bottom: .3rem;
+}
+.stop small { font-size: .72rem; line-height: 1.3; }
+.route-line {
+  flex: 1; min-width: 80px; max-width: 200px;
+  margin-top: 1.4rem;
+  border-top: 2px dashed var(--yellow);
+  position: relative;
+  text-align: center;
+}
+.route-line i {
+  position: absolute; top: -.85rem; left: 50%;
+  transform: translateX(-50%);
+  background: var(--navy);
+  padding: 0 .4rem;
+  color: #fff; font-size: 1.3rem;
+}
+.journey-quote { font-size: 1.5rem; margin: 0; transform: rotate(-4deg); }
+
+
+.site-footer { background: var(--green); color: #fff; padding: 1rem 0; font-size: .8rem; }
+.site-footer a { color: #fff; }
+.social { display: flex; gap: 1.1rem; font-size: 1.5rem; }
+.social a { text-decoration: none; }
+.social a:hover { color: var(--yellow); }
+
+
+@media (max-width: 991px) {
+  .hero { background:
+    linear-gradient(180deg, #fff 45%, rgba(255,255,255,.2) 100%),
+    url('images/golden-gate.jpg') center / cover no-repeat,
+    linear-gradient(180deg, #fff, #fdeedd 50%, #f8c79f); }
+  .hero-photo-wrap { margin-top: 1.5rem; }
+  .photo-flag { transform: translateX(-160px) rotate(-8deg); }
+  .skills-col { border-right: 0; }
+  .interest { border-right: 0; }
+  .journey-quote { text-align: left; transform: none; }
 }
