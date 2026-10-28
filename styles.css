@@ -221,14 +221,14 @@ h1, h2, h3, h4 { font-weight: 700; color: var(--navy); }
 }
 .journey-quote { font-size: 1.5rem; margin: 0; transform: rotate(-4deg); }
 
-/* ===== FOOTER ===== */
+
 .site-footer { background: var(--green); color: #fff; padding: 1rem 0; font-size: .8rem; }
 .site-footer a { color: #fff; }
 .social { display: flex; gap: 1.1rem; font-size: 1.5rem; }
 .social a { text-decoration: none; }
 .social a:hover { color: var(--yellow); }
 
-/* ===== RESPONSIVE ===== */
+
 @media (max-width: 991px) {
   .hero { background:
     linear-gradient(180deg, #fff 45%, rgba(255,255,255,.2) 100%),
