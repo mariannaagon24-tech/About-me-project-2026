@@ -5,7 +5,7 @@
   --green-dark: #07562e;
   --yellow: #ffd21f;
   --blue: #0b5ed7;
-  --navy: #0a2a6b;
+  --navy: #143685;
   --mint: #eef6f2;
   --text: #0a2a6b;
 }
@@ -109,7 +109,7 @@ h1, h2, h3, h4 { font-weight: 700; color: var(--navy); }
   font-size: 1.5rem;
   line-height: 1.25;
   text-align: left;
-  color: var(--navy);
+  color: white;
 }
 
 /* ===== SHARED SECTION TITLES ===== */
